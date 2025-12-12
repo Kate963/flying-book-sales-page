@@ -1,0 +1,156 @@
+/* RESET & BASICS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Readability [cite: 28] */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* COLOR SCHEME: Flying/Sky Theme [cite: 22] */
+:root {
+    --primary-blue: #0077be; /* Sky Blue */
+    --light-sky: #e0f7fa;
+    --sunset-orange: #ff5722; /* High contrast for CTA */
+    --white: #ffffff;
+    --text-dark: #2c3e50;
+}
+
+/* LAYOUT UTILITIES */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* HERO SECTION [cite: 11] */
+.hero-section {
+    background: linear-gradient(to bottom, #87CEEB, #E0F7FA); /* Sky gradient */
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Shadow [cite: 24] */
+    margin-top: 30px;
+    max-height: 400px;
+}
+
+/* BUTTONS & INTERACTIONS [cite: 24, 25] */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--sunset-orange);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Micro-interaction */
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
+
+/* FEATURES SECTION [cite: 16] */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* REVIEWS SECTION [cite: 17] */
+.section-dark {
+    background-color: #f4f4f4;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap; /* Mobile responsive  */
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-style: italic;
+}
+
+/* CHECKOUT SECTION  */
+.checkout-box {
+    background-color: var(--light-sky);
+    padding: 50px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-blue);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin: 20px 0;
+}
+
+.security-badge {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* MOBILE RESPONSIVENESS  */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
